@@ -1,0 +1,49 @@
+name: survey_analysis
+version: 1.0.0
+
+setting:
+  pip:
+    requirements:
+      - python-dotenv
+      - pandas
+      - numpy==2.2.6
+      - matplotlib
+      - seaborn
+      - scikit-learn
+      - langchain_core
+      - langchain_openai
+      - langchain_experimental
+      - fastapi
+      - uvicorn
+      - pydantic
+      - wordcloud
+      - gensim
+      - konlpy
+      - httpx==0.27.2
+      - langfuse==2.60.4
+      - langchain-community 
+
+  ai_logic_deployer_url: "https://ald-ym.llm-dev.try-mellerikat.com"
+
+  credential:
+    env_file: .env
+
+components:
+  local_host:
+    port: 1444
+
+  vector_store:
+    uri: #https://xx.xxx.x.xx:xxxx
+    type: #Faiss # Faiss
+
+  
+
+  workers: Default # Default: CPU CORE 수 * 2 
+
+service_api:
+  path:
+    /api/ask_chat:
+      POST:
+        handler: chat.ask_chat
+        parameter:
+          topic: str

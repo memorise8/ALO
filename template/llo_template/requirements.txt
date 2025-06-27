@@ -1,0 +1,10 @@
+python-dotenv
+pandas
+numpy
+scikit-learn
+openai
+langchain-openai
+langchain-core
+langchain-experimental
+wordcloud
+matplotlib

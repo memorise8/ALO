@@ -1,0 +1,13 @@
+include *.yaml
+include alo_llm/config/*
+include alo_llm/ConfigFormats/*
+include alo_llm/Dockerfiles/*
+include alo_llm/router/*
+include setting/*
+include template/*
+include example/*
+
+recursive-include alo_llm/Dockerfiles *
+recursive-include setting *
+recursive-include template *
+recursive-include example *
